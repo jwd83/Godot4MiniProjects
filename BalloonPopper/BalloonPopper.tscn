@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ptnov0t8jic"]
+
+[ext_resource type="Script" path="res://BalloonPopper/BalloonManager.gd" id="1_tkiwy"]
+[ext_resource type="PackedScene" uid="uid://esw8ttdes2c6" path="res://BalloonPopper/MyBalloon.tscn" id="2_jjj2d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7gao7"]
+font_size = 24
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("score_text")]
+transform = Transform3D(0.988072, 0.133955, -0.0759562, -0.127361, 0.988131, 0.0858809, 0.0865589, -0.0751827, 0.993406, 0, 0, 0)
+script = ExtResource("1_tkiwy")
+score_text = NodePath("Label")
+
+[node name="Balloon" parent="." instance=ExtResource("2_jjj2d")]
+transform = Transform3D(0.178988, 0.978497, -0.102502, -0.524626, 0.18306, 0.83142, 0.832305, -0.095039, 0.54611, -0.231637, 1.18007, -0.932084)
+clicks_to_pop = 2
+
+[node name="Balloon2" parent="." instance=ExtResource("2_jjj2d")]
+transform = Transform3D(1, -5.58794e-09, 1.49012e-08, -1.39698e-09, 1, 0, 0, 0, 1, 1.38149, 0.187291, -0.106199)
+clicks_to_pop = 3
+
+[node name="Balloon3" parent="." instance=ExtResource("2_jjj2d")]
+transform = Transform3D(1, -5.58794e-09, 1.49012e-08, -1.39698e-09, 1, 0, 0, 0, 1, -1.63476, -0.221628, 0.125669)
+
+[node name="Balloon4" parent="." instance=ExtResource("2_jjj2d")]
+transform = Transform3D(1, -3.67872e-08, 2.98023e-08, -1.39698e-09, 1, 0, 0, 7.45058e-09, 1, 0.878049, 1.12954, 0.00897806)
+clicks_to_pop = 8
+
+[node name="Balloon5" parent="." instance=ExtResource("2_jjj2d")]
+transform = Transform3D(1, -5.12227e-09, 7.45058e-09, -1.39698e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.91971)
+fov = 95.4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.180381, -0.983592, -0.00315907, 0.573679, 0.102597, 0.812629, -0.798971, -0.148395, 0.582773, 0, 0, 1.91971)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 15.0
+offset_right = 252.0
+offset_bottom = 66.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_7gao7")

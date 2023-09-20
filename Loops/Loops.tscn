@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7fno0o15yona"]
+
+[ext_resource type="Script" path="res://Loops/Loops.gd" id="1_pw4pt"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pw4pt")
+spawn_count = 1000
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
